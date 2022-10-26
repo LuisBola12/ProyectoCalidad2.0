@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora&display=swap');
+
+:root {
+  --nav-size: 60px;
+  --sidebar-btn-height: 60px;
+  --border: 1px solid #474a4d;
+  --border-radius: 8px;
+  --speed: 500ms;
+}
+
+.sidebar-component {
+  width: calc(var(--nav-size) * 0.8);
+  margin-right: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.sidebar-dropdown-icon svg {
+  fill: var(#fff);
+  width: 50px;
+  height: 50px;
+  color: white;
+}
+
+
+.sidebar-dropdown {
+  position: absolute;
+  margin-top: 15px;
+  margin-left: 65px;
+  top: 58px;
+  width: 250px;
+  height: calc(var(--sidebar-btn-height) * 4);
+  background-color: #083148;
+  box-shadow: 0px 0px 10px 0px #051d2c;
+  transform: translateX(-45%);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  overflow: hidden;
+  transition: height var(--speed) ease;
+}
+
+.sidebar-menu {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+  gap: 25px;
+  padding-bottom: 35px;
+}
+
+.sidebar-button-div {
+  width: 100%;
+}
+
+.sidebar-button {
+  height: var(--sidebar-btn-height);
+  width: 100%;
+  text-align: center;
+  background-color: #133c54;
+  color: white;
+  border-radius: 1rem;
+  border: none;
+}
+
+.sidebar-button:hover {
+  background-color: #114c6d;
+}
+
+/* .sidebar-activeProject{
+  padding-left: 1vh;
+  padding-right: 1vh;
+  text-align: center;
+  color: white;
+  border-radius: 15px;
+  font-weight: bold;
+  font-size: 3vh;
+  background: #298588;
+} */

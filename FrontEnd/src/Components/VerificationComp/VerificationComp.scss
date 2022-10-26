@@ -1,0 +1,32 @@
+.verification-page{
+  // border: solid red;
+  height: 96vh;
+  text-align: center;
+}
+
+.verify-text{
+  margin-top: 100px;
+}
+
+.icon{
+  margin-top: 80px;
+}
+
+.verify-btn-login{
+  margin-top: 80px;
+  background-color: #3673be;
+}
+
+.verify-btn-login:hover{
+  background: #4b8bda;
+  box-shadow: 0px 3px 8px 0px #747474;
+}
+.verify-btn-resend{
+  margin-top: 80px;
+  margin-left: 70px;
+  background-color: #47b8bc;
+}
+.verify-btn-resend:hover{
+  background: #63ccd0;
+  box-shadow: 0px 3px 8px 0px #747474;
+}

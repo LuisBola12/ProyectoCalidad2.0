@@ -1,0 +1,192 @@
+.logIn-page {
+  display: flex;
+  height: 100vh;
+  gap: 15vh;
+  justify-content: center;
+  background-color: #133c54;
+}
+
+.logIn-btn-box {
+  text-align: center;
+}
+
+.logIn-btn-login {
+  width: 60vh;
+  height: 8vh;
+  border-radius: 5px;
+  font-family: 'sora', Tahoma;
+  font-weight: bold;
+  color: white;
+  font-size: 4vh;
+  background: #47b8bc;
+  border: 0vh;
+  margin-bottom: 4vh;
+}
+
+.logIn-btn-login:hover {
+  background: #63ccd0;
+  box-shadow: 0px 3px 8px 0px #051d2c;
+}
+
+.logIn-btn-CheckIn {
+  width: 40vh;
+  height: 8vh;
+  border-radius: 5px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  color: white;
+  font-size: 4vh;
+  background: #3673be;
+  border: 0vh;
+  text-decoration: none;
+  margin-top: 5vh;
+}
+
+.logIn-btn-CheckIn:hover {
+  background: #4b8bda;
+  box-shadow: 0px 3px 8px 0px #051d2c;
+}
+
+.logIn-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4.5vh;
+  width: 65vh;
+  height: 68vh;
+  border-radius: 1.5vh;
+  box-shadow: 0px 0px 10px 0px #051d2c;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.logIn-footerCopyRights {
+  position: absolute;
+  bottom: 0;
+  color: white;
+  font-size: 2.2vh;
+}
+
+.logIn-error-message {
+  color: rgb(233, 84, 84);
+  text-align: center;
+  margin-top: 5vh;
+  font-family: Roboto;
+}
+
+.logIn-logo {
+  background-color: transparent;
+  background-image: url(../../icons/logo.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 20vh;
+  height: 20vh;
+}
+
+.logIn-logo-box {
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 95vh;
+  height: 75vh;
+}
+
+.linea-horizontal {
+  background: #03121c;
+  width: 60vh;
+  border: 1.2px solid #03121c;
+}
+
+.logIn-AppName {
+  color: white;
+  font-size: 6.5vh;
+  margin-left: 8vh;
+  margin-top: auto;
+  margin-bottom: auto;
+  font-weight: 600;
+}
+
+.logIn-text {
+  margin-top: 4vh;
+  color: white;
+  font-size: 2.8vh;
+  text-align: justify;
+}
+
+.logIn-logo-AppName {
+  display: flex;
+}
+
+.login-animated-input-email {
+  position: relative;
+  width: 60vh;
+  height: 8vh;
+
+  &__input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1vh solid white;
+    border-radius: 0.8vh;
+    font-family: inherit;
+    font-size: 1.4rem;
+    color: black;
+    outline: none;
+    padding: 1.25rem;
+    background: white;
+
+    &:hover {
+      border-color: white;
+    }
+
+
+    &:focus {
+      border-color: white;
+    }
+  }
+
+  &:hover {
+    border-color: white;
+  }
+
+
+  &:focus {
+    border-color: white;
+  }
+
+
+  &__label {
+    position: absolute;
+    left: 0.8rem;
+    top: 0.8rem;
+    padding: 0 0.5rem;
+    color: black;
+    cursor: text;
+    font-size: 1.4rem;
+    transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in;
+    background-color: none;
+  }
+
+  .req {
+    color: darkred;
+    font-size: 1.5rem;
+    margin: 3px;
+  }
+
+}
+
+.login-animated-input-email__input:focus~.login-animated-input-email__label,
+.login-animated-input-email__input:not(:placeholder-shown).login-animated-input-email__input:not(:focus)~.login-animated-input-email__label {
+  top: -1.5rem;
+  font-size: 1.2rem;
+  left: 0.8rem;
+  color: white;
+
+  .req {
+    opacity: 0;
+    font-size: 0px;
+    margin: 0px;
+  }
+}

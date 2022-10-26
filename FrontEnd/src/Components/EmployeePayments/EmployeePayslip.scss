@@ -1,0 +1,73 @@
+.payrollReport-page{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .payrollReport-header{
+    // margin-top: 10px;
+    margin-bottom: 30px;
+    &__title{
+      text-align: center;
+      font-size: 32px;
+      font-weight: bold;
+      margin-bottom: 40px;
+    }
+  }
+  
+  .payrollReport{
+    &__text{
+      width: 550px;
+      margin-bottom: 3px;
+    }
+    &__total{
+      margin-bottom: 3px;
+    }
+    &__title{
+      font-size: 22px;
+      font-weight: bold;
+      margin-top: 20px;
+      margin-bottom: 15px;
+    }
+    &__TotalText{
+      width: 550px;
+      font-size: 19px;
+      font-weight: bold;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+    &__totalTotal{
+      font-size: 19px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    &__totalCostText{
+      width: 550px;
+      font-size: 19px;
+      font-weight: bold;
+      margin-top: 10px;
+      margin-bottom: 30px;
+    }
+    &__totalCost{
+      font-size: 19px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+  }
+  
+  .payrollReport-div{
+    width: 100%;
+    display: flex;
+  }
+  
+  .payrollReport-button{
+    width: 100%;
+    padding-left: 30px;
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    // border: solid red;  
+  }

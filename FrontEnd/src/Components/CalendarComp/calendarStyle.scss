@@ -1,0 +1,135 @@
+.react-calendar { 
+  padding: 30px;
+  width: 100%;
+  background-color: #fff;
+  font-size: 30px;
+  color: #133c54;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
+  font-family: Roboto;
+  line-height: 1.125em;
+ }
+
+ .react-calendar__navigation button {
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px  solid  #133c54;
+  color: #133c54;
+  min-width: 15%;
+  background: none;
+  font-size: 19px;
+  font-weight: 600;
+  margin-top: 8px;
+ }
+ .react-calendar__navigation button:enabled:hover,
+ .react-calendar__navigation button:enabled:focus {
+  background-color: #f7f7f7;
+ }
+ .react-calendar__navigation button[disabled] {
+  background-color: #ececec;
+ }
+ abbr[title] {
+  text-decoration: none;
+ }
+
+ .react-calendar__tile{
+   width: 75px;
+   height: 75px;
+ }
+
+ .react-calendar__tile[disabled]{
+  background-color: #ececec;
+}
+
+ .react-calendar__tile:enabled:hover,
+ .react-calendar__tile:enabled:focus {
+  background: #133c54;
+  color: white;
+  border-radius: 6px;
+ }
+
+ // Dia actual
+ .react-calendar__tile--now {
+  background: #4f87a8;
+  border-radius: 6px;
+  font-weight: bold;
+  color: white;
+ }
+
+ .react-calendar__tile--now:enabled:hover,
+ .react-calendar__tile--now:enabled:focus {
+  background: #133c54;
+  color: white;
+  border-radius: 6px;
+  font-weight: bold;
+ }
+ 
+ .react-calendar__tile--hasActive:enabled:hover,
+ .react-calendar__tile--hasActive:enabled:focus {
+  background: #133c54;
+  color: white;
+ }
+
+ // Dia seleccionado
+ .react-calendar__tile--active {
+  background: #133c54;
+  color: white;
+  border-radius: 6px;
+  font-weight: bold;
+ }
+ .react-calendar__tile--active:enabled:hover,
+ .react-calendar__tile--active:enabled:focus {
+  background: #133c54;
+  color: white;
+ }
+
+ .calendar-page{
+  margin-top: 20px;
+  display: flex;
+  gap: 30px;
+  text-align: center;
+  justify-content: center;
+ }
+
+ .calendar-error{
+  color: #D8000C;
+  text-align: center;
+  font-size: 0.7rem;
+}
+
+.calendar-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 46%;
+}
+
+.calendar-table-container{
+  width: 46%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.calendar-table-div{
+  width: 100%;
+  // box-shadow: 0 5px 24px rgba(0, 0, 0, 0.2);
+  // border-radius: 5px;
+}
+
+.calendar-table{
+  width: 100%;
+}
+
+.text-center{
+  margin-top: 20px;
+}
+
+.calendar-table-empty{
+  margin-top: 40px;
+  font-size: 1.5rem;
+  opacity: 75%;
+  text-align: center;
+}

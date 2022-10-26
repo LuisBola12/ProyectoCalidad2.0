@@ -1,0 +1,318 @@
+@apiUsers = http://localhost:4000/users
+@apiUpdateEmployee = http://localhost:4000/updateEmployee
+@apiUpdateEmployeer = http://localhost:4000/updateEmployeer
+@apiProfileEmployee = http://localhost:4000/profileEmployee
+@apiProfileEmployeer = http://localhost:4000/profileEmployeer
+@apiEmployees = http://localhost:4000/employee
+@apiEmployee = http://localhost:4000/employee
+@apiEmployeeContract = http://localhost:4000/employee/contract
+@apiProjects = http://localhost:4000/projects
+@apiBenefits = http://localhost:4000/benefits
+@apiMyBenefits = http://localhost:4000/myBenefits
+@apiVoluntaryDeductions = http://localhost:4000/voluntaryDeductions
+@apiMyVoluntaryDeductions = http://localhost:4000/myVoluntaryDeductions
+@apiCreateEmployer =  http://localhost:4000/createEmployer
+@apiVerifyUser =  http://localhost:4000/verifyUser
+@apiEmployer =  http://localhost:4000/employer
+@apiContracts = http://localhost:4000/typeContracts
+@apiTotalCostBenefits = http://localhost:4000/CostTotalBenefits
+@apiEmployeeWithContractOnOtherProyects = http://localhost:4000/employeesWithContractsOnOtherProyects
+@apiContractEmployee = http://localhost:4000/contractExistentEmployee
+@apaSetHours = http://localhost:4000/employee/hours
+@apiCreatePayrroll = http://localhost:4000/getProjectPeriod
+@apiDeleteEmployeeFromProject = http://localhost:4000/deleteEmployeeFromProject
+@apiPagoPruebas = http://localhost:4000/pago
+@apiOfferedVoluntaryDeductions = http://localhost:4000/offeredVoluntaryDeductions
+@apiCreatePayrroll = http://localhost:4000/createPayrroll
+@apiGetEmployeesInfo = http://localhost:4000/getEmployeesInfo
+@apiCostTotalVoluntaryDeductions = http://localhost:4000/CostTotalVoluntaryDeductions
+@apiEliminateProject = http://localhost:4000/logicEliminateProject
+
+@apigetProjectsEmailAndName = http://localhost:4000/myProjects
+@apiValidateBenefit = http://localhost:4000/validateBenefit
+@apiPayrroll = http://localhost:4000/payrrolls
+@apiGetPayslips =  http://localhost:4000/payslipsOfaProject
+@apiEmployeePayments = http://localhost:4000/employeePayments
+@apiTotalSalaryCost = http://localhost:4000/getTotalSalaryCost
+
+GET {{apiTotalSalaryCost}}/26/Cine Milagro
+###
+GET {{apiPayrroll}}/Taquería Milagro
+###
+DELETE {{apiDeleteEmployeeFromProject}}
+Content-Type: application/json
+
+{
+  "Cedula":"118706423",
+  "NombreProyecto":"Taquería Milagro"
+}
+
+###
+POST {{apiGetPayslips}}
+Content-Type: application/json
+
+{
+  "Proyecto":"Taquería Milagro",
+  "ConsecutivoPlanilla":"90" 
+}
+
+###
+POST {{apiCreatePayrroll}}
+Content-Type: application/json
+
+{
+  "Cedula":"608110776",
+  "NombreProyecto":"Taquería Milagro" 
+}
+
+
+###
+POST {{apiDeleteEmployeeFromProject}}
+Content-Type: application/json
+
+{
+  "Proyecto":"Taquería Milagro",
+  "EmailEmpleado":"luibv12@hotmail.com",
+  "MotivoDeDespido":"AAAAAAAAAAAAAA"
+}
+
+
+###
+POST {{apiContractEmployee}}
+Content-Type: application/json
+
+{
+  "Cedula":"120920129",
+  "TipoContrato":"Por horas",
+  "Proyecto":"Taquería Milagro",
+  "NombreServicio": "",
+  "SalarioPorHora":3000,
+  "FechaFinContrato":"2026-12-12",
+  "ValorServicio":""
+}
+
+###
+POST {{apiEmployeeWithContractOnOtherProyects}}
+Content-Type: application/json
+
+{
+  "Email":"Norman.Os.L@gmail.com",
+  "Proyecto":"Taquería Milagro"
+}
+
+###
+POST {{apiUsers}}
+Content-Type: application/json
+
+{
+  "Email": "aroaefaefexample.com",
+  "Contrasenia": "fdef"
+}
+###
+POST {{apiCreateEmployer}}
+Content-Type: application/json
+
+{
+  "Cedula" : "8765434", 
+  "Nombre" : "prueba", 
+  "Apellido1" : "por favor", 
+  "Apellido2" : "funcione", 
+  "Telefono" : "12345567",
+  "Email" : "jklkjhg@qwert.com",
+  "Contrasenia": "123445"
+}
+###
+POST {{apiVerifyUser}}
+Content-Type: application/json
+
+{
+  "Cedula": "121121121",
+  "Email": "josefR@example.com"
+}
+###
+GET {{apiProfileEmployee}}/javier.Mo@gmail.com
+###
+GET {{apiProfileEmployeer}}/Norman.Os.L@gmail.com
+###
+POST {{apiEmployeeContract}}
+Content-Type: application/json
+
+{
+  "Cedula": "187612921",
+  "Proyecto": "Radiadores Solceri"
+}
+
+###
+GET {{apiEmployee}}/187612921
+
+###
+PUT {{apiUpdateEmployeer}}
+Content-Type: application/json
+
+{
+  "Nombre":"Ana",
+  "Apellido1":"Matus",
+  "Apellido2":"Gomez",
+  "Cedula":"760120742",
+  "Email":"marasasasas.gon.lu@yahoo.es",
+  "Telefono":"79912121",
+  "EmailViejo":"joan.lepa@hotmail.com"
+}
+###
+PUT {{apiUpdateEmployee}}
+Content-Type: application/json
+
+{
+  "Nombre":"Ana",
+  "Apellido1":"Matus",
+  "Apellido2":"Gomez",
+  "Cedula":"403711862",
+  "Email":"marasas.gon.lu@yahoo.es",
+  "Telefono":"79912121",
+  "EmailViejo":"mar.gon.lu@yahoo.es"
+}
+###
+GET {{apiEmployer}}
+
+###
+GET {{apiUsers}}
+
+###
+GET {{apiUsers}}/josefR@example.com
+
+###
+GET {{apiEmployees}}/Cine Milagro
+
+###
+GET {{apiProjects}}/norman.os.l@gmail.com/admin
+
+###
+GET  {{apiVoluntaryDeductions}}/Taquería Milagro
+
+###
+GET {{apiBenefits}}/Taquería Milagro
+
+###
+GET {{apiContracts}}
+
+###
+GET {{apiMyBenefits}}/Taquería Milagro/javier.Mo@gmail.com
+###
+GET {{apiOfferedVoluntaryDeductions}}/Taquería Milagro/javier.Mo@gmail.com
+
+###
+POST {{apiBenefits}}
+Content-Type: application/json
+
+{
+  "Nombre":"Prueba444",
+  "NombreProyecto": "Radiadores Solceri",
+  "CostoActual": 4000
+}
+
+###
+POST {{apiEmployees}}
+Content-Type: application/json
+
+{
+  "Nombre":"Prueba",
+  "NombreProyecto": "Radiadores Solceri",
+  "CostoActual": 4000
+}
+
+###
+POST {{apiVoluntaryDeductions}}
+Content-Type: application/json
+
+{
+  "Nombre":"Prueba3",
+  "NombreProyecto": "Taquería Milagro",
+  "Costo": 0,
+  "Descripcion": "prueba descripcion3"
+}
+
+###
+POST {{apiEmployee}}
+Content-Type: application/json
+
+{
+  "NombreProyecto":"Taquería Milagro",
+  "Email":"jdvenegas50@gmail.com",
+  "Roles":"emp",
+  "Nombre":"Buenas",
+  "Apellido1":"Tardes",
+  "Apellido2":"Noches",
+  "Cedula":"123896754",
+  "Telefono":87126121,
+  "TipoJornada":"Por Horas",
+  "FechaFinContrato":"2025-09-19",
+  "SalarioPorHora":"6000",
+  "NombreServicio":"",
+  "ValorServicio":0
+}
+
+###
+POST {{apiProjects}}
+Content-Type: application/json
+
+{
+  "Nombre":"Pepsi",
+  "Periodo":"Mensual",
+  "Email":"josefR@example.com"
+}
+
+###
+
+POST {{apaSetHours}}
+Content-Type: application/json
+
+{
+  "Nombre": "Almuerzo de prueba",
+  "NombreProyecto": "Taquería Milagro",
+  "CostoActual": 20000,
+  "Descripción": "Esto es una prueba de la edición"
+}
+
+### 
+POST {{apiTotalCostBenefits}}
+Content-Type: application/json
+
+{
+  "Email": "javier.Mo@gmail.com", 
+  "Proyecto": "Taquería Milagro", 
+  "ConsecutivoPlanilla": 1, 
+  "ConsecutivoPago" : 1
+}
+
+### 
+POST {{apiPagoPruebas}}
+Content-Type: application/json
+
+{
+    "CedulaEmpleado": "208010869",
+    "CedulaEmpleador": "608110776",
+    "NombreProyecto": "Taquería Milagro",
+    "SalarioBruto": "800000",
+    "TipoJornada" : "Semanal",
+    "ConsecutivoPlanilla": 42,
+    "ConsecutivoPago": 21
+}
+###
+GET {{apiGetEmployeesInfo}}/Taquería Milagro
+
+###
+PUT {{apiEliminateProject}}
+Content-Type: application/json
+
+{
+  "Nombre":"Taquería Milagro"
+}
+
+###
+GET {{apigetProjectsEmailAndName}}/Norman.Os.L@gmail.com/Taquería Milagro
+###
+GET {{apiValidateBenefit}}/Taquería Milagro/crhisCo@hotmail.com/Comida
+
+
+###
+GET {{apiEmployeePayments}}/Taquería Milagro/crhisCo@hotmail.com

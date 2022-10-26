@@ -1,0 +1,182 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  font-family: 'Sora', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.error-message {
+  color: red;
+}
+
+.animated-input {
+  position: relative;
+  width: 20rem;
+  height: 3rem;
+
+  &__input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid grey;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: inherit;
+    color: black;
+    outline: none;
+    padding: 1.25rem;
+    background: none;
+
+    &:hover {
+      border-color: #133c54;
+    }
+
+
+    &:focus {
+      border-color: #133c54;
+    }
+  }
+
+  &__textarea {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 201%;
+    height: 350%;
+    border: 2px solid grey;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: inherit;
+    color: black;
+    outline: none;
+    padding: 1.25rem;
+    background: none;
+    resize: none;
+
+    &:hover {
+      border-color: #133c54;
+    }
+
+
+    &:focus {
+      border-color: #133c54;
+    }
+  }
+
+  &__label {
+    position: absolute;
+    left: 1rem;
+    top: 0.8rem;
+    padding: 0 0.5rem;
+    color: black;
+    cursor: text;
+    transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in;
+    background-color: white;
+
+    .req {
+      color: darkred;
+      margin: 5px;
+    }
+  }
+}
+
+.animated-input__input:focus~.animated-input__label,
+.animated-input__input:not(:placeholder-shown).animated-input__input:not(:focus)~.animated-input__label {
+  top: -0.5rem;
+  font-size: 0.8rem;
+  left: 0.8rem;
+
+  .req {
+    opacity: 0;
+    font-size: 0px;
+    margin: 0px;
+  }
+}
+
+.animated-input__textarea:focus~.animated-input__label,
+.animated-input__textarea:not(:placeholder-shown).animated-input__textarea:not(:focus)~.animated-input__label {
+  top: -0.5rem;
+  font-size: 0.8rem;
+  left: 0.8rem;
+}
+
+.voluntaryDeductions-form {
+  margin-top: 2rem;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.image-voluntaryDeduction {
+  background-image: url(../../icons/voluntaryDeductionIcon.png);
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 5rem;
+  height: 5rem;
+}
+
+.form-title-voluntaryDeductions {
+  font-size: 2.35rem;
+  color: #133c54;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: bold;
+}
+
+.form-group-voluntaryDeductions {
+  display: flex;
+  gap: 1%;
+}
+
+.create-voluntaryDeduction-btn:hover {
+  background-color: rgb(7, 145, 7);
+  box-shadow: 0px 2px 8px 0px rgba(62, 62, 62, 0.55);
+}
+
+.cancel-voluntaryDeduction-btn:hover {
+  background-color: rgb(172, 1, 1);
+  box-shadow: 0px 2px 8px 0px rgba(62, 62, 62, 0.55);
+}
+
+.create-voluntaryDeduction-btn {
+  background-color: darkgreen;
+  padding: 10px;
+  border-radius: 8px;
+  color: white;
+  border-color: white;
+  border-style: none;
+  width: 200px;
+  font-size: 1.3rem;
+}
+
+.cancel-voluntaryDeduction-btn {
+  background-color: darkred;
+  padding: 10px;
+  border-radius: 8px;
+  color: white;
+  border-color: white;
+  border-style: none;
+  width: 200px;
+  font-size: 1.3rem;
+}
+
+.buttons-voluntaryDeduction {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 9rem;
+}

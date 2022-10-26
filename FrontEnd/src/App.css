@@ -1,0 +1,853 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora&display=swap');
+
+* {
+  font-family: 'sora', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  /* background-color: #282c34; */
+  background-color: #000;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.table-button {
+  width: 90%;
+  display: flex;
+  gap: 50px;
+  /* border: solid black; */
+}
+
+.details-table-button {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  width: 90%;
+}
+
+.details-head-title {
+  font-family: sans-serif;
+  text-align: center;
+  width: 100%;
+}
+
+
+.profile-user-header {
+  margin-top: 40px;
+  justify-content: center;
+  display: flex;
+}
+
+.page-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  box-shadow: 0px 0px 10px 0px rgba(115, 115, 115, 0.55);
+  margin: 2.5%;
+  border-radius: 1rem;
+  min-height: 80vh;
+  gap: 30px;
+}
+
+.user-profile-image {
+  background-image: url(icons/user_profile_icon.png);
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 10rem;
+  height: 10rem;
+
+}
+
+
+.button {
+  padding: 10px;
+  border-radius: 8px;
+  color: white;
+  border-color: white;
+  background-color: #133c54;
+  border-style: none;
+  width: 100px;
+}
+
+.hire-button {
+  margin-bottom: 20px;
+  background-color: gray;
+  padding: 10px;
+  border-radius: 8px;
+  color: white;
+  border-color: white;
+  border-style: none;
+  width: 200px;
+}
+
+.end-contract-button {
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: darkred;
+  border-style: none;
+  width: 150px;
+}
+
+.user-Profile-table-button {
+  margin-top: 40px;
+  text-align: right;
+  width: 100%;
+}
+
+.user-info-container {
+  width: 80%;
+}
+
+.user-profile-hr {
+  border: solid 1px;
+}
+
+.user-profile-header {
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.edit-profile-button {
+  border: none;
+  background-color: white;
+}
+
+.user-profile-buttons {
+  width: 100%;
+  display: none;
+  gap: 30px;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+
+.submit-change-btn {
+  padding: 13px;
+  border-radius: 8px;
+  color: white;
+  border-color: white;
+  background-color: darkgreen;
+  border-style: none;
+  width: 100px;
+}
+
+.dont-change-btn {
+  padding: 13px;
+  border-radius: 8px;
+  color: white;
+  border-color: white;
+  background-color: darkred;
+  border-style: none;
+  width: 100px;
+}
+
+.user-profile-edit-button {
+  color: #133c54;
+  width: 50px;
+  height: 50px;
+}
+
+.employee-to-EndContract {
+  font-size: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.reason-to-end-contract {
+  width: 87.5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+}
+
+.user-profile-label {
+  font-family: sans-serif;
+  font-weight: bold;
+  margin-left: 15px;
+  font-size: 20px;
+}
+
+.user-profile-inner-div {
+  border-top: solid 1px#000;
+  display: flex;
+  align-items: center;
+  height: 80px;
+
+}
+
+.error-label-userprofile {
+  color: red;
+  margin-left: 15px;
+  font-size: 15px;
+}
+
+.error-label {
+  color: red;
+  display: none;
+  margin-left: 15px;
+  font-size: 15px;
+}
+
+.div-profile {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+}
+
+.user-profile-input {
+  border: none;
+  padding-left: 15px;
+  font-family: sans-serif;
+  height: 65px;
+  font-size: 20px;
+  width: 75%;
+}
+
+.user-profile-input[disabled] {
+  background-color: white;
+  color: #000;
+}
+
+.user-profile-input:focus {
+  border: solid 1px white;
+}
+
+.input-editing {
+  padding-left: 15px;
+  font-family: sans-serif;
+  height: 65px;
+  font-size: 20px;
+  width: 75%;
+  border: solid 1px #000;
+}
+
+.input-editing:focus {
+  border: solid 1px white;
+}
+
+.user-profile-form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  width: 100%;
+}
+
+.form-end-contract {
+  width: 90%;
+  margin-top: 2rem;
+  gap: 1.8rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.image-terminateContract {
+  background-image: url(./icons/tContractIcon.png);
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 6rem;
+  height: 6rem;
+}
+
+.form-terminateContract-employee {
+  font-size: 40px;
+}
+
+.form-end-contract-title {
+  height: 15%;
+  width: 80%;
+  gap: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-profile-logo {
+  text-align: center;
+  border-radius: 50%;
+  color: white;
+  line-height: 100px;
+  font-size: 25px;
+  background-color: #133c54;
+  width: 100px;
+  height: 100px;
+}
+
+.emp-pay-button {
+  padding: 10px;
+  border-radius: 8px;
+  color: white;
+  border-color: white;
+  background-color: #147cb7;
+  border-style: none;
+  width: 100px;
+}
+
+.details-button {
+  padding: 10px;
+  border-radius: 8px;
+  color: white;
+  border-color: white;
+  /* background-color: #133c54; */
+  background-color: #147cb7;
+  border-style: none;
+  width: 100px;
+}
+.report-button {
+  padding: 10px;
+  border-radius: 8px;
+  color: white;
+  border-color: white;
+  background-color: #00788C;
+  border-style: none;
+  width: 100px;
+}
+.back-arrow-button {
+  padding: 10px;
+  text-align: left;
+  border-radius: 8px;
+  border-color: white;
+  background: none;
+  border-style: none;
+  width: 150px;
+}
+
+
+.button:hover {
+  background-color: #1f6085;
+}
+
+.warning-message {
+  color: darkred;
+  padding-right: 95px;
+
+}
+
+.add-button {
+  background-color: darkgreen;
+}
+
+.add-button:hover {
+  background-color: rgb(3, 119, 3);
+}
+
+
+.create-button:hover {
+  background-color: rgb(3, 119, 3);
+}
+
+
+.cancel-button {
+  background-color: darkred;
+}
+
+.cancel-button:hover {
+  background-color: rgb(172, 1, 1);
+}
+
+.create-button {
+  margin-bottom: 20px;
+  background-color: darkgreen;
+  padding: 10px;
+  border-radius: 8px;
+  color: white;
+  border-color: white;
+  border-style: none;
+  width: 200px;
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+  text-align: center;
+
+}
+
+table {
+  text-align: center;
+  height: 10%;
+  width: 90%;
+}
+
+
+th {
+  margin-bottom: 20px;
+  background-color: #133c54;
+  color: white;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 20px;
+}
+
+td {
+  padding: 20px;
+  text-align: center;
+}
+
+
+tr:nth-child(even) {
+  background-color: rgb(233, 233, 233);
+}
+
+.right-td {
+  text-align: right;
+}
+
+.center-td {
+  text-align: center;
+}
+
+.right-button {
+  text-align: right;
+  padding: 0;
+}
+
+.center-button {
+  text-align: center;
+  padding: 0;
+}
+
+.left-td {
+  text-align: left;
+}
+
+.description-cell {
+  width: 40%;
+}
+
+
+.table-left-border {
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+
+.table-right-border {
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+.dropdown-Contract {
+  border-style: solid;
+  height: 55px;
+  width: 500px;
+  padding: 8px;
+  text-align: center;
+  border-radius: 0.25rem;
+}
+
+.form-group {
+  margin-top: 30px;
+}
+
+.forms-create-employee {
+  margin: 40px;
+}
+
+.user-head {
+  position: relative;
+  right: 100px;
+}
+
+.user-img {
+  height: 300px;
+  width: 300px;
+  margin-top: 80px;
+}
+
+.user-tag {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 30px;
+}
+
+.employee-label {
+  font-size: 25px;
+  margin-right: 20px;
+  width: 300px;
+}
+
+.employee-input {
+  height: 55px;
+  width: 500px;
+  border-radius: 0.25rem;
+  text-align: center;
+}
+
+.hire-header-button {
+
+  text-align: left;
+}
+
+.hire-header {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  margin-top: 3%;
+}
+
+.hire-header-title {
+  font-size: 2.5rem;
+  color: #133c54;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5.7rem;
+  width: 75%;
+  font-weight: bold;
+  margin-top: 2%;
+}
+
+.employee-input-address {
+  height: 100px;
+  width: 500px;
+  border-radius: 0.25rem;
+}
+
+.submit-btn-employee {
+  margin: 50px;
+  background-color: darkgreen;
+  padding: 10px;
+  border-radius: 8px;
+  color: white;
+  border-color: white;
+  border-style: none;
+  height: 80px;
+  width: 150px;
+}
+
+.back-btn-employee {
+  margin: 50px;
+  background-color: darkred;
+  padding: 10px;
+  border-radius: 8px;
+  color: white;
+  border-color: white;
+  border-style: none;
+  height: 80px;
+  width: 150px;
+}
+
+.employee-hired-until {
+  height: 55px;
+  width: 500px;
+  border-radius: 0.25rem;
+  text-align: center;
+}
+
+.submit-cancel-employee {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.employee-address-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+::-webkit-input-placeholder {
+  text-align: center;
+}
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  text-align: center;
+}
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  text-align: center;
+}
+
+:-ms-input-placeholder {
+  text-align: center;
+}
+
+.loader {
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #3498db;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+  margin-top: 10%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.forms-create-employee-hwage {
+  margin: 40px;
+  display: none;
+}
+
+.forms-create-employee-hwage2 {
+  margin: 40px;
+}
+
+.forms-create-employee-service {
+  margin: 40px;
+  display: none;
+  /* color: #74f2f0; */
+}
+
+.forms-create-employee-service2 {
+  margin: 40px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.Empty-message {
+  font-size: 2rem;
+  opacity: 60%;
+  text-align: center;
+}
+
+.sticky-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.benefit-name {
+  width: 20%;
+}
+
+.ofer-benefits {
+  width: 90%;
+}
+
+.voluntaryDeduction-name {
+  width: 20%;
+}
+
+.offer-voluntaryDeductions {
+  width: 90%;
+}
+
+.editProjectButtons {
+  width: 100%;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+
+.editProjectsErrors {
+  color: red;
+  margin-left: 15px;
+  /* font-size: 20px; */
+
+}
+
+.editborderRed,
+.editborderRed:hover {
+  border-color: red;
+
+}
+
+.projectEditTitle {
+  width: 50rem;
+  font-weight: 600;
+}
+
+.project-info-header {
+  margin-top: 3%;
+}
+
+.projectCancelButton {
+  background-color: darkred;
+}
+
+.projectCreateButton {
+  background-color: darkgreen;
+  margin-right: 20px;
+}
+
+.projectButon {
+  width: 9rem;
+  padding: 10px;
+  border-radius: 8px;
+  color: white;
+  border-color: white;
+  border-style: none;
+}
+
+.project-button-icons {
+  display: flex;
+  gap: 20px;
+}
+
+.delete-project-button {
+  color: #133c54;
+  width: 55px;
+  height: 55px;
+  margin-top: 3.5px;
+}
+
+.details-table-button {
+  margin-top: 75px;
+}
+
+.export-excel-button {
+  background-color: darkgreen;
+  width: 10rem;
+}
+
+.report-header {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.generate-payslip-button-employer{
+  padding: 10px;
+  border-radius: 8px;
+  color: white;
+  background-color: transparent;
+  border: none;
+  width: 100px;
+}
+
+.project-Name-Filter {
+  width: fit-content;
+  border-radius: 8px;
+  padding-left: 10px;
+  height: 42px;
+  border: 1px solid darkgray;
+}
+
+.project-Name-Filter:focus, 
+.project-date-filter:focus  {
+  outline:solid 0.1px gray;
+} 
+
+.project-date-filter {
+  border-radius: 8px;
+  width: 235px;
+  height: 42px;
+  padding-left: 10px;
+  border: 1px solid darkgray;
+}
+
+
+.filter-icon {
+  color: #133c54bf;
+  width: 30px;
+  height: 30px;
+}
+
+.filter-payments-report {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.benefit-graphic-container {
+  margin-top: 20px;
+  gap: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 55%;
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.voluntaryDeductions-graphic-container {
+  margin-left: auto;
+  margin-right: auto;
+  height: 45%;
+  width: 85%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.navigate-title {
+  width: 90%;
+  display: flex;
+  margin-top:30px;
+  gap: 50px;
+  align-items: center;
+  /* border: solid black; */
+}
+.div-foto{
+  margin: auto;
+  display: flex;
+  align-items: center;
+}
+.foto-grupal{
+  width: 70%;
+  height: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+.letras-chicas{
+  text-align: right;
+}
+.titulo-about-us{
+  margin-top: 20px;
+}
